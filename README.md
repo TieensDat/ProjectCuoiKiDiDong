@@ -1,7 +1,10 @@
-
-## Chức năng
+## TRAVEL APP
+## - Mô tả
+Đây là ứng dụng dành cho người du lịch muốn đặt khách sạn từ xa.
+Bao gồm 63 tỉnh thành.
+Ứng dụng là giao diện với người dùng và các thao tác trên đó.
+## - Chức năng
 Ứng dụng này dành cho phía người dùng cuối:
-- Tìm kiếm khách sạn theo các tỉnh thành ở Việt  Nam
 - Lọc khách sạn, sắp xếp khách sạn
 - Đặt phòng
 - Thanh toán qua ZaloPay hoặc trả tại khách sạn
@@ -11,6 +14,8 @@
 - Xem các voucher mình sở hữu
 - Xem thông báo
 - Đánh giá khách sạn
+- ## Cộng nghệ:
+- Firebase,Android Studio,Sql server, Spring tool suite.
 
 
 
