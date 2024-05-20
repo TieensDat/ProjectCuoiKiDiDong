@@ -181,6 +181,8 @@ public class HomeFragment extends Fragment {
             }
         });
 
+
+
         hotHotelAdapter.setData(listHotHotel);
         //rcvHotHotel.setAdapter(hotHotelAdapter);
         observedHotels();

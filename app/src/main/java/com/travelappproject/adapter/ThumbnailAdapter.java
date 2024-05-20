@@ -17,7 +17,7 @@ import com.travelappproject.R;
 
 import java.util.List;
 
-public class ThumbnailAdapter extends RecyclerView.Adapter<ThumbnailAdapter.ThumbnailViewHolder> {
+public class    ThumbnailAdapter extends RecyclerView.Adapter<ThumbnailAdapter.ThumbnailViewHolder> {
     List<String> mListLocation;
     List<Integer> mListImages;
     Context mContext;

@@ -90,8 +90,8 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Favori
                 .placeholder(R.mipmap.ic_launcher_round)
                 .error(R.mipmap.ic_launcher_round);
 
-        String tmp = mList.get(position).getThumbImage();
-        String path = "https://statics.vntrip.vn/data-v2/hotels/" + mList.get(position).getId() + "/img_max/" + tmp;
+        String path = mList.get(position).getThumbImage();
+        //String path = "https://statics.vntrip.vn/data-v2/hotels/" + mList.get(position).getId() + "/img_max/" + tmp;
         Glide.with(mContext).load(path).apply(options).into(holder.img);
         holder.name.setText(hotel.getName());
         holder.txtNumStar.setText(String.valueOf(mList.get(position).getStarRate()));

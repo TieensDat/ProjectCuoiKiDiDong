@@ -79,7 +79,7 @@ public class EditProfileActivity extends AppCompatActivity {
         firestore = FirebaseFirestore.getInstance();
 
         storage = FirebaseStorage.getInstance();
-        storageReference = storage.getReferenceFromUrl("gs://travel-81548.appspot.com");
+        storageReference = storage.getReferenceFromUrl("gs://travelapp-54e7b.appspot.com");
 
         imgAvatar = (CircularImageView) findViewById(R.id.img_profile);
         imgAdd = (CircularImageView) findViewById(R.id.img_add);

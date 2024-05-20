@@ -63,6 +63,8 @@ dependencies {
     implementation fileTree(dir: '/Users/nguyenduylinh/Downloads', include: ['*.aar', '*.jar'], exclude: [])
     implementation fileTree(dir: '/Users/quochung/Downloads/DemoZPDK_Android/ZPDK-Android', include: ['*.aar', '*.jar'], exclude: [])
     implementation 'com.google.firebase:firebase-messaging:23.0.5'
+    implementation fileTree(dir: 'C:\\Users\\ZaloSDK(Android studio)', include: ['*.aar', '*.jar'], exclude: [])
+    implementation files('C:\\Users\\ZaloSDK(Android studio)\\zpdk-release-v3.1.aar')
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'

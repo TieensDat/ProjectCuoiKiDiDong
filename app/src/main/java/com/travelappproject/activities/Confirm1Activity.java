@@ -15,10 +15,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,23 +25,20 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.type.DateTime;
 import com.shuhart.stepview.StepView;
 import com.travelappproject.HandleCurrency;
 import com.travelappproject.R;
 import com.travelappproject.RetrofitInstance;
-import com.travelappproject.SendMessageApi;
+import com.travelappproject.ApiService;
 import com.travelappproject.adapter.PaymentAdapter;
 import com.travelappproject.helperforzalopay.AppInfo;
 import com.travelappproject.helperforzalopay.CreateOrder;
-import com.travelappproject.model.hotel.Booking;
 import com.travelappproject.model.hotel.Data;
 import com.travelappproject.model.hotel.Hotel;
 import com.travelappproject.model.hotel.Message;
@@ -55,7 +50,6 @@ import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -89,7 +83,7 @@ public class Confirm1Activity extends AppCompatActivity {
     String choice;
     User user;
     ExecutorService executorService;
-    SendMessageApi sendMessageApi;
+    ApiService sendMessageApi;
     EditText edtDiscount;
     Button btnApply;
     long discount;
@@ -100,7 +94,7 @@ public class Confirm1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm1);
 
-        sendMessageApi = RetrofitInstance.retrofit.create(SendMessageApi.class);
+        sendMessageApi = RetrofitInstance.retrofit.create(ApiService.class);
         executorService = Executors.newSingleThreadExecutor();
 
         if (mAuth.getCurrentUser() != null) {

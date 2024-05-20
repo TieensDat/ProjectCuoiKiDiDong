@@ -24,7 +24,7 @@ public class Hotel implements Serializable {
     private String nameVi;
     private String fullAddress;
     private double starRate;
-    private Location location;
+    private Location location; // không lấy
     private String fullAddressEn;
     private long countReviews;
     private String thumbImage;
@@ -33,17 +33,16 @@ public class Hotel implements Serializable {
     private String phone;
     private String checkInTime;
     private String checkOutTime;
+
     private HotelPolicies hotelPolicies;
     private long totalRooms;
-    private List<Facility> facilities;
-    private List<Image> images;
+    private List<Facility> facilities; // khong dung den
+    private List<Image> images; // khong dung den add hotels khong chay
     private String provinceName;
     private String cityName;
 
     @JsonProperty("id")
-    public long getId() {
-        return id;
-    }
+    public long getId() {return id; }
 
     @JsonProperty("id")
     public void setId(long value) {
@@ -71,9 +70,7 @@ public class Hotel implements Serializable {
     }
 
     @JsonProperty("name_vi")
-    public String getNameVi() {
-        return nameVi;
-    }
+    public String getNameVi() {return nameVi; }
 
     @JsonProperty("name_vi")
     public void setNameVi(String value) {

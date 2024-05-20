@@ -123,7 +123,6 @@ public class SignUpActivity extends AppCompatActivity {
                                     }
                                 }
                             });
-
                         }
                         else
                             ToastPerfect.makeText(getApplicationContext(), ToastPerfect.SUCCESS, getString(R.string.emailverified), ToastPerfect.BOTTOM, ToastPerfect.LENGTH_SHORT).show();                    }

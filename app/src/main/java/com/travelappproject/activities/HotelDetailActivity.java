@@ -389,8 +389,8 @@ public class HotelDetailActivity extends AppCompatActivity {
                     viewPageAdapter = new ViewPageAdapter(HotelDetailActivity.this, hotel);
                     viewPager2.setAdapter(viewPageAdapter);
 
-                    lat = String.valueOf(hotel.getLocation().getLat());
-                    lon = String.valueOf(hotel.getLocation().getLon());
+                    //lat = String.valueOf(hotel.getLocation().getLat());
+                    //lon = String.valueOf(hotel.getLocation().getLon());
 
                     txtNameHotel.setText(hotel.getName());
                     txtLocationAddress.setText(hotel.getFullAddress());
@@ -400,8 +400,10 @@ public class HotelDetailActivity extends AppCompatActivity {
                     List<SlideModel> slideModelList = new ArrayList<>();
                     List<Image> hotelImageList = hotel.getImages();
 
-                    for (int i = 0; i < hotelImageList.size(); i++) {
-                        String path = "https://statics.vntrip.vn/data-v2/hotels/" + idHotel + "/img_max/" + hotelImageList.get(i).getSlug();
+                     //for (int i = 0; i < hotelImageList.size(); i++) {
+                    for (int i = 0; i < 100; i++) {
+                        //String tmp = mHotelList.get(position).getThumbImage();
+                        String path = "https://th.bing.com/th?id=OIP.fV-yiQOulI2OQbCQLWOmcAAAAA&w=289&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2";
                         SlideModel slideModel = new SlideModel(path, null, ScaleTypes.FIT);
 
                         if (i == 20) {
@@ -413,7 +415,7 @@ public class HotelDetailActivity extends AppCompatActivity {
                     roomAdapter = new RoomAdapter(HotelDetailActivity.this, new RoomAdapter.IClickRoomListener() {
                         @Override
                         public void onCallBack(Room room) {
-                            DocumentReference docRef = mFireStore.collection("Hotels/" + idHotel + "/rooms").document(String.valueOf(room.getId()));
+                            DocumentReference docRef = mFireStore.collection("Hotels/" + idHotel +"/rooms").document(String.valueOf(room.getId()));
                             docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                 @Override
                                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -546,7 +548,7 @@ public class HotelDetailActivity extends AppCompatActivity {
 
 
         }
-
+        /*
         String finalLat = lat;
         String finalLon = lon;
         btnViewMap.setOnClickListener(new View.OnClickListener() {
@@ -558,6 +560,7 @@ public class HotelDetailActivity extends AppCompatActivity {
                 startActivity(mapIntent);
             }
         });
+         */
     }
 
     @Override

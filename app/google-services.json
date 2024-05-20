@@ -1,36 +1,27 @@
 {
   "project_info": {
-    "project_number": "208595860126",
-    "project_id": "travel-81548",
-    "storage_bucket": "travel-81548.appspot.com"
+    "project_number": "129200091867",
+    "firebase_url": "https://travelapp-54e7b-default-rtdb.firebaseio.com",
+    "project_id": "travelapp-54e7b",
+    "storage_bucket": "travelapp-54e7b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:208595860126:android:649cf3087b6ab72546998f",
+        "mobilesdk_app_id": "1:129200091867:android:0faa94f3435e672b41d2fe",
         "android_client_info": {
           "package_name": "com.travelappproject"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "208595860126-qntkok3ud18to6ql0v55tjdfcrc8n6nn.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB36pGICak-jrDOkYYLJF335g3iG9xDzGI"
+          "current_key": "AIzaSyBqoqm8luLadGsAsZOe9Tm1-ZHr9PfLMag"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "208595860126-qntkok3ud18to6ql0v55tjdfcrc8n6nn.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

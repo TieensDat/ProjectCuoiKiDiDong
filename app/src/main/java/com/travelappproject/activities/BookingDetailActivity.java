@@ -42,7 +42,6 @@ import java.util.Date;
 import java.util.HashMap;
 
 public class BookingDetailActivity extends AppCompatActivity {
-
     TextView txtStatusPayment,txtStatus,txtNameHotel, txtAddress, idBooking, dateBooking, txtDateCheckIn, txtChoice, txtDateCheckOut, txtPrice, nameHotel, txtTypeRoom;
     Booking booking;
     Toolbar toolbar;

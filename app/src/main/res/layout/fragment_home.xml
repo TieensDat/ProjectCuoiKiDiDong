@@ -145,7 +145,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/hot_hotel"
+            android:text=""
             android:fontFamily="@font/helveticaneue_medium"
             android:textColor="@color/black"
             android:textSize="25dp"
@@ -159,7 +159,8 @@
             android:visibility="visible">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility="gone">
                 <include layout="@layout/shimmer_item_hotel_2"/>
                 <include layout="@layout/shimmer_item_hotel_2"/>
             </LinearLayout>

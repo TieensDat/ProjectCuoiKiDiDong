@@ -96,8 +96,8 @@ public class HotelAdapter1 extends RecyclerView.Adapter<HotelAdapter1.Hotel1View
                     .placeholder(R.mipmap.ic_launcher_round)
                     .error(R.mipmap.ic_launcher_round);
 
-            String tmp = mHotelList.get(position).getThumbImage();
-            String path = "https://statics.vntrip.vn/data-v2/hotels/" + mHotelList.get(position).getId() + "/img_max/" + tmp;
+            String path = mHotelList.get(position).getThumbImage();
+            //String path = "https://statics.vntrip.vn/data-v2/hotels/" + mHotelList.get(position).getId() + "/img_max/" + tmp;
             hotelHolder.txtAmount.setText(new HandleCurrency().handle(mHotelList.get(position).getPrice()));
             Glide.with(mContext).load(path).apply(options).into(hotelViewHolder.imgHotel);
         }

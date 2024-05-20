@@ -40,12 +40,18 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.Response;
+import com.travelappproject.ApiService;
 import com.travelappproject.R;
+import com.travelappproject.RetrofitInstance;
+import com.travelappproject.model.hotel.User;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+import retrofit2.Call;
 import vn.thanguit.toastperfect.ToastPerfect;
 
 
@@ -123,6 +129,13 @@ public class SignInActivity extends AppCompatActivity {
                 mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        ApiService apiService = RetrofitInstance.getRetrofitInstance().create(ApiService.class);
+
+                        User user = new User(email,pass);
+
+                        Call<Void> call = apiService.registerUser(user);
+
+
                         if (task.isSuccessful()) {
                             firestore.collection("users").document(task.getResult().getUser().getUid()).update(map)
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
